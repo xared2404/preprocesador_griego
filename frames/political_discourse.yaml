@@ -17,9 +17,10 @@ lexicon:
     "estado": 1.0
     "government": 1.0
     "gobierno": 1.0
+    "tirano": 0.6
 
   violence:
     "force": 1.0
     "violence": 1.0
     "violencia": 1.0
-    "tirano": 0.8
+    "castigo": 0.6
