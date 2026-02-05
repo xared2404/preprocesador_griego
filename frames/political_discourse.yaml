@@ -1,0 +1,25 @@
+name: political_discourse_v0
+description: "Frame básico de discurso político moderno"
+
+dimensions:
+  - legitimacy
+  - authority
+  - violence
+
+lexicon:
+  legitimacy:
+    "legitimidad": 1.5
+    "law": 1.0
+    "ley": 1.0
+
+  authority:
+    "state": 1.0
+    "estado": 1.0
+    "government": 1.0
+    "gobierno": 1.0
+
+  violence:
+    "force": 1.0
+    "violence": 1.0
+    "violencia": 1.0
+    "tirano": 0.8
