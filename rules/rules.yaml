@@ -1,0 +1,26 @@
+rules:
+  - name: nomos_vs_dike_tension
+    when:
+      frame: attic_tragedy_v0
+      all:
+        - score_gte: { dim: nomos, value: 2.0 }
+        - score_gte: { dim: dike, value: 2.0 }
+    then:
+      label: tension_nomos_dike
+      message: "Alta tensión entre ley (nomos) y justicia (dike)."
+      boost:
+        nomos: 0.05
+        dike: 0.05
+
+  - name: polis_authority
+    when:
+      frame: attic_tragedy_v0
+      any:
+        - score_gte: { dim: polis, value: 1.8 }
+        - has_form: { dim: polis, value: "tirano" }
+        - has_form: { dim: polis, value: "τυραννος" }
+    then:
+      label: authority_polis
+      message: "Señales de autoridad/polis (tirano/πόλις)."
+      boost:
+        polis: 0.08
