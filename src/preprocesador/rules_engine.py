@@ -27,6 +27,35 @@ def _score_gte(scores: Dict[str, float], dim: str, value: float) -> bool:
 def _has_form(matched_forms: Dict[str, List[str]], dim: str, value: str) -> bool:
     return value in (matched_forms.get(dim) or [])
 
+def load_rules_from_yaml(path: str | Path) -> List[Dict[str, Any]]:
+    """
+    Carga un archivo YAML de reglas y devuelve una lista de dicts (rules).
+    Acepta dos formatos:
+      - raíz con key 'rules': {rules: [ ... ]}
+      - raíz como lista: [ ... ]
+    """
+    p = Path(path)
+    data = yaml.safe_load(p.read_text(encoding="utf-8"))
+
+    if data is None:
+        return []
+
+    if isinstance(data, dict) and "rules" in data:
+        rules = data["rules"]
+    else:
+        rules = data
+
+    if not isinstance(rules, list):
+        raise ValueError(f"Formato inválido en {p}. Se esperaba lista de reglas o dict con 'rules'.")
+
+    # Normaliza: cada regla debe ser dict
+    out: List[Dict[str, Any]] = []
+    for r in rules:
+        if isinstance(r, dict):
+            out.append(r)
+        else:
+            raise ValueError(f"Regla inválida (no es dict): {r}")
+    return out
 
 def apply_rules(
     rules_doc: Dict[str, Any],

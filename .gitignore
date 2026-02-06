@@ -1,0 +1,14 @@
+# venv
+.venv/
+
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+
+# outputs
+reports/
+data/corpus/*.txt
+reports/
