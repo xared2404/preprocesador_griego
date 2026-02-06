@@ -1,0 +1,39 @@
+form	form_key	lemma_key	upos	feats
+ὁ	ο	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Nom
+τοῦ	του	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Gen
+τῷ	τω	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Dat
+τόν	τον	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Acc
+ἡ	η	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Nom
+τῆς	τησ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Gen
+τῇ	τη	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Dat
+τήν	την	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Acc
+τό	το	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Nom
+τοῦ	του	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Gen
+τῷ	τω	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Dat
+τό	το	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Acc
+οἱ	οι	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Nom
+τῶν	των	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Gen
+τοῖς	τοισ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Dat
+τούς	τουσ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Acc
+αἱ	αι	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Nom
+τῶν	των	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Gen
+ταῖς	ταισ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Dat
+τάς	τασ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Acc
+τά	τα	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Nom
+τῶν	των	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Gen
+τοῖς	τοισ	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Dat
+τά	τα	ο, η, το	DET	PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Acc
+ἐγώ	εγω	εγω	PRON	PronType=Prs|Person=1|Number=SG|Case=Nom
+σύ	συ	συ	PRON	PronType=Prs|Person=2|Number=SG|Case=Nom
+καὶ	και	και	CCONJ	ConjType=Coord
+καί	και	και	CCONJ	ConjType=Coord
+ἐν	εν	εν	ADP	ExpectedCase=Dat
+εἰς	εισ	εις	ADP	ExpectedCase=Acc
+ἐκ	εκ	εκ	ADP	ExpectedCase=Gen
+διά	δια	δια	ADP	ExpectedCase=Gen/Acc
+μετά	μετα	μετα	ADP	ExpectedCase=Gen/Acc
+ὑπέρ	υπερ	υπερ	ADP	ExpectedCase=Gen/Acc
+ἐπί	επι	επι	ADP	ExpectedCase=Gen/Dat/Acc
+παρά	παρα	παρα	ADP	ExpectedCase=Gen/Dat/Acc
+σύν	συν	συν	ADP	ExpectedCase=Dat
+ἄνευ	ανευ	ανευ	ADP	ExpectedCase=Gen

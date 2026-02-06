@@ -1,0 +1,38 @@
+{"form": "ὁ", "form_key": "ο", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Nom"}
+{"form": "τοῦ", "form_key": "του", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Gen"}
+{"form": "τῷ", "form_key": "τω", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Dat"}
+{"form": "τόν", "form_key": "τον", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=SG|Case=Acc"}
+{"form": "ἡ", "form_key": "η", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Nom"}
+{"form": "τῆς", "form_key": "τησ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Gen"}
+{"form": "τῇ", "form_key": "τη", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Dat"}
+{"form": "τήν", "form_key": "την", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=SG|Case=Acc"}
+{"form": "τό", "form_key": "το", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Nom"}
+{"form": "τοῦ", "form_key": "του", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Gen"}
+{"form": "τῷ", "form_key": "τω", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Dat"}
+{"form": "τό", "form_key": "το", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=SG|Case=Acc"}
+{"form": "οἱ", "form_key": "οι", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Nom"}
+{"form": "τῶν", "form_key": "των", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Gen"}
+{"form": "τοῖς", "form_key": "τοισ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Dat"}
+{"form": "τούς", "form_key": "τουσ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=M|Number=PL|Case=Acc"}
+{"form": "αἱ", "form_key": "αι", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Nom"}
+{"form": "τῶν", "form_key": "των", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Gen"}
+{"form": "ταῖς", "form_key": "ταισ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Dat"}
+{"form": "τάς", "form_key": "τασ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=F|Number=PL|Case=Acc"}
+{"form": "τά", "form_key": "τα", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Nom"}
+{"form": "τῶν", "form_key": "των", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Gen"}
+{"form": "τοῖς", "form_key": "τοισ", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Dat"}
+{"form": "τά", "form_key": "τα", "lemma_key": "ο, η, το", "upos": "DET", "feats": "PronType=Art|Definite=Def|Gender=N|Number=PL|Case=Acc"}
+{"form": "ἐγώ", "form_key": "εγω", "lemma_key": "εγω", "upos": "PRON", "feats": "PronType=Prs|Person=1|Number=SG|Case=Nom"}
+{"form": "σύ", "form_key": "συ", "lemma_key": "συ", "upos": "PRON", "feats": "PronType=Prs|Person=2|Number=SG|Case=Nom"}
+{"form": "καὶ", "form_key": "και", "lemma_key": "και", "upos": "CCONJ", "feats": "ConjType=Coord"}
+{"form": "καί", "form_key": "και", "lemma_key": "και", "upos": "CCONJ", "feats": "ConjType=Coord"}
+{"form": "ἐν", "form_key": "εν", "lemma_key": "εν", "upos": "ADP", "feats": "ExpectedCase=Dat"}
+{"form": "εἰς", "form_key": "εισ", "lemma_key": "εις", "upos": "ADP", "feats": "ExpectedCase=Acc"}
+{"form": "ἐκ", "form_key": "εκ", "lemma_key": "εκ", "upos": "ADP", "feats": "ExpectedCase=Gen"}
+{"form": "διά", "form_key": "δια", "lemma_key": "δια", "upos": "ADP", "feats": "ExpectedCase=Gen/Acc"}
+{"form": "μετά", "form_key": "μετα", "lemma_key": "μετα", "upos": "ADP", "feats": "ExpectedCase=Gen/Acc"}
+{"form": "ὑπέρ", "form_key": "υπερ", "lemma_key": "υπερ", "upos": "ADP", "feats": "ExpectedCase=Gen/Acc"}
+{"form": "ἐπί", "form_key": "επι", "lemma_key": "επι", "upos": "ADP", "feats": "ExpectedCase=Gen/Dat/Acc"}
+{"form": "παρά", "form_key": "παρα", "lemma_key": "παρα", "upos": "ADP", "feats": "ExpectedCase=Gen/Dat/Acc"}
+{"form": "σύν", "form_key": "συν", "lemma_key": "συν", "upos": "ADP", "feats": "ExpectedCase=Dat"}
+{"form": "ἄνευ", "form_key": "ανευ", "lemma_key": "ανευ", "upos": "ADP", "feats": "ExpectedCase=Gen"}
