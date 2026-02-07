@@ -2,12 +2,14 @@
 
 ## Quickstart
 
-### 1) Create environment
-```python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
+## 1) Create environment
+
+'''python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
 
 ### 2) Run the pipeline on a minimal example
+
 # Example (adjust to your script names)
-```
+
 ./.venv/bin/python scripts/export_conllu.py
 '''
 
