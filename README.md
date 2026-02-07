@@ -15,7 +15,9 @@ python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
 ```
 
 ### 3) inspect output
-```sed -n '1,120p' outputs/parsed.conllu
+
+```
+sed -n '1,120p' outputs/parsed.conllused -n
 ```
 
 ### Expected shape:
@@ -63,19 +65,32 @@ Proyecto en fase fundacional.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
+```
 
 # IMPORTANT: pip<24.1 needed to install some HF/spaCy wheels with nonstandard filenames
+
+```
 python -m pip install "pip<24.1"
 
 python -m pip install -r requirements.txt
 
+```
 # HuggingFace token (recommended)
+
+```
 export HF_TOKEN="hf_...."
 
+```
+
 # Run final ensemble
+
+```
 python -m src.run_pipeline_final \
   --in data/corpus/antigone_grc_excerpt.txt \
   --frame frames/attic_tragedy.yaml \
+
+
+```
   --rules rules/rules.yaml \
   --json reports/final_antigone.json \
   --csv reports/final_antigone.csv
