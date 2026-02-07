@@ -3,24 +3,27 @@
 ## Quickstart
 
 ## 1) Create environment
-
-'''python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
+```
+python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
+```
 
 ### 2) Run the pipeline on a minimal example
 
 # Example (adjust to your script names)
-
+```
 ./.venv/bin/python scripts/export_conllu.py
-'''
+```
 
 ### 3) inspect output
 ```sed -n '1,120p' outputs/parsed.conllu
+```
 
 ### Expected shape:
-	•	# sent_id = ... ensure stable sentence ids
-	•	# text = ... original sentence
-	•	10-column CoNLL-U rows
-	•	MISC includes TokKey=...
+ sent_id = ... ensure stable sentence ids
+	
+ text = ... original sentence
+	10-column CoNLL-U rows
+	MISC includes TokKey=...
 
 ### Project boundary (important)
 
@@ -36,7 +39,7 @@ See: docs/preprocessor_contract.md.
 
 
 Este proyecto explora el diseño de un **preprocesador cognitivo-hermenéutico**
-para textos griegos antiguos (especialmente tragedia ática).
+para textos griegos antiguos.
 
 El objetivo no es limpiar texto, sino **configurar el espacio de sentido**
 previo a la modelización NLP.
