@@ -1,20 +1,19 @@
-from src.preprocesador.lexicon import attic_tragedy_frame
-from src.preprocesador.pipeline import CognitivePreprocessor
+from preprocesador.lexicon import attic_tragedy_frame
+from preprocesador.pipeline import CognitivePreprocessor
 
-text = """
-Antígona desafía la ley del tirano por una justicia superior.
-νόμος δίκη πόλις
-"""
+def main():
+    pre = CognitivePreprocessor(frame=attic_tragedy_frame)
+    res = pre.run("ὁ ἄνθρωπος καὶ ἡ γυνή .")
 
-frame = attic_tragedy_frame()
-p = CognitivePreprocessor(frame)
-res = p.run(text)
+    print("FRAME:", res.frame)
+    print("NOTE:", res.note)
+    print("NORMALIZED:", res.normalized_text)
+    print("TOKENS:", res.tokens)
+    print("LEMMAS:", res.lemmas)
 
-print("FRAME:", res.frame_name)
-print("NORMALIZED:", res.normalized_text)
-print("TOKENS:", res.tokens)
-print("SCORES:", res.scores)
-print("DOMINANT:", res.dominant_dimension)
-print("MATCHES (all):", res.matches)
-print("MATCHES (dominant):", res.explanation["why_dominant"]["evidence"])
-print("NOTE:", res.explanation["note"])
+    top = sorted(res.scores.items(), key=lambda kv: kv[1], reverse=True)[:2]
+    print("TOP_SCORES:", top)
+    print("DOMINANT:", res.dominant_dimension)
+
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, List, Tuple, Any, Optional
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
+
+FrameLike = Any
+FrameFactory = Callable[[], FrameLike]
 
 
 @dataclass
@@ -20,61 +23,49 @@ class PreprocessResult:
 
 
 class CognitivePreprocessor:
-    def __init__(self, frame):
-        self.frame = frame
+    def __init__(self, frame: Union[FrameLike, FrameFactory]):
+        # Accept either a Frame object with .score(), or a factory function returning it.
+        self.frame = frame() if callable(frame) else frame
 
     def run(self, text: str) -> PreprocessResult:
         pack: Dict[str, Any] = self.frame.score(text)
 
-        scores = pack["scores"]
-        matched_forms = pack.get("matched_forms", {})
-        matched_lemmas = pack.get("matched_lemmas", {})
-        matches_forms = pack.get("matches_forms", {})
-        matches_lemmas = pack.get("matches_lemmas", {})
+        scores: Dict[str, float] = pack["scores"]
+        dominant_dimension: Optional[str] = pack.get("dominant_dimension")
 
-        # evidencia principal para tie-break: forms + lemmas combinadas
-        combined_matches: Dict[str, List[Tuple[str, float]]] = {}
-        for d in self.frame.dimensions:
-            combined_matches[d] = (matches_forms.get(d, []) or []) + (matches_lemmas.get(d, []) or [])
+        normalized_text: str = pack.get("normalized_text", "")
+        tokens: List[str] = pack.get("tokens", [])
+        lemmas: List[str] = pack.get("lemmas", [])
 
-        # dominante determinista (no None)
-        max_score = max(scores.values()) if scores else 0.0
-        top = [d for d, s in scores.items() if s == max_score]
+        matched_forms: Dict[str, List[str]] = pack.get("matched_forms", {})
+        matched_lemmas: Dict[str, List[str]] = pack.get("matched_lemmas", {})
 
-        if len(top) == 1:
-            dominant = top[0]
-        else:
-            # tie-break por evidencia total
-            def ev_count(dim: str) -> int:
-                return len(combined_matches.get(dim, []) or [])
+        # Keep compatibility with older/newer naming
+        matches: Dict[str, List[Tuple[str, float]]] = (
+            pack.get("matches")
+            or pack.get("matches_forms")
+            or {}
+        )
+        matches_lemmas: Dict[str, List[Tuple[str, float]]] = (
+            pack.get("matches_lemmas")
+            or {}
+        )
 
-            top2 = sorted(top, key=lambda d: ev_count(d), reverse=True)
-            best = top2[0]
-            best_ev = ev_count(best)
-            tied = [d for d in top2 if ev_count(d) == best_ev]
+        note: str = pack.get("note", "")
 
-            if len(tied) == 1:
-                dominant = best
-            else:
-                # tie-break final por orden del frame
-                dominant = None
-                for d in self.frame.dimensions:
-                    if d in tied:
-                        dominant = d
-                        break
-                if dominant is None:
-                    dominant = tied[0]
+        # Frame id (string) should be stable for reproducibility
+        frame_id = pack.get("frame", getattr(self.frame, "name", None)) or "unknown_frame"
 
         return PreprocessResult(
-            frame=self.frame.name,
+            frame=str(frame_id),
             scores=scores,
-            dominant_dimension=dominant,
-            normalized_text=pack["normalized_text"],
-            tokens=pack.get("tokens", []),
-            lemmas=pack.get("lemmas", []),
+            dominant_dimension=dominant_dimension,
+            normalized_text=normalized_text,
+            tokens=tokens,
+            lemmas=lemmas,
             matched_forms=matched_forms,
             matched_lemmas=matched_lemmas,
-            matches=combined_matches,
+            matches=matches,
             matches_lemmas=matches_lemmas,
-            note="v3: evidencia por forma + evidencia por lema (CLTK). Ensemble listo.",
+            note=note,
         )
