@@ -3,21 +3,16 @@
 ## Quickstart
 
 ### 1) Create environment
-```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-'''
+```python -m venv .venv source .venv/bin/activate pip install -r requirements.txt
+
 ### 2) Run the pipeline on a minimal example
 # Example (adjust to your script names)
-```bash
+```
 ./.venv/bin/python scripts/export_conllu.py
 '''
 
 ### 3) inspect output
-```bash
-sed -n '1,120p' outputs/parsed.conllu
-'''
+```sed -n '1,120p' outputs/parsed.conllu
 
 ### Expected shape:
 	•	# sent_id = ... ensure stable sentence ids
